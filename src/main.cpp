@@ -96,7 +96,7 @@ int main(int argc, char **argv) {
     for (hid_device_info *device = devices; device != nullptr;
          device = device->next) {
         // Check if the device is a supported display
-        bool supported = true;
+        bool supported = false;
         for (unsigned short i : SUPPORTED_DISPLAYS) {
             if (device->product_id == i) {
                 supported = true;
